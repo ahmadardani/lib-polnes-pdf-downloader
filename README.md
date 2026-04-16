@@ -15,7 +15,7 @@ Tampermonkey userscript to download hidden PDF blobs from **[lib.polnes.ac.id](h
    * **Firefox:** [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 
 2. Click the link below to automatically install the script:
-   * **[Install POLNES PDF Downloader](https://raw.githubusercontent.com/ahmadardani/lib-polnes-pdf-downloader/main/lib-polnes-pdf-downloader.user.js)**
+   * **[Install POLNES Library PDF Downloader](https://raw.githubusercontent.com/ahmadardani/lib-polnes-pdf-downloader/main/lib-polnes-pdf-downloader.user.js)**
 
 ### How to Use
 
@@ -37,7 +37,7 @@ Userscript Tampermonkey untuk mengunduh PDF blob yang tersembunyi dari **[lib.po
    * **Firefox:** [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 
 2. Klik tautan di bawah ini untuk menginstal script secara otomatis:
-   * **[Instal POLNES PDF Downloader](https://raw.githubusercontent.com/ahmadardani/lib-polnes-pdf-downloader/main/lib-polnes-pdf-downloader.user.js)**
+   * **[Instal POLNES Library PDF Downloader](https://raw.githubusercontent.com/ahmadardani/lib-polnes-pdf-downloader/main/lib-polnes-pdf-downloader.user.js)**
 
 ### Cara Penggunaan
 
