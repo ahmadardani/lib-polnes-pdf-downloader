@@ -2,6 +2,8 @@
 
 *Read this in: [English](#english) | [Bahasa Indonesia](#indonesia)*
 
+<img width="1366" height="768" alt="Screenshot_2026-04-16_10-57-45" src="https://github.com/user-attachments/assets/b1892759-54fa-4913-a46a-e349beb8e568" />
+
 ---
 
 ## <a name="english"></a>English
@@ -48,5 +50,5 @@ Userscript Tampermonkey untuk mengunduh PDF blob yang tersembunyi dari **[lib.po
 
 ---
 
-## 📝 License
+## License
 This project is licensed under the **MIT License**.
