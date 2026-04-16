@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         POLNES Library PDF Downloader
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Polnes Library PDF Blobs Downloader
 // @author       ahmadardani
 // @homepageURL  https://github.com/ahmadardani/lib-polnes-pdf-downloader
@@ -104,10 +104,19 @@
     // --- XHR Interceptor ---
     const rawSend = XMLHttpRequest.prototype.send;
     XMLHttpRequest.prototype.send = function () {
-        this.addEventListener("load", function () {
+        this.addEventListener("load", async function () {
             try {
-                const buf = this.response;
-                if (!(buf instanceof ArrayBuffer)) return;
+                let buf;
+
+                // Only process binary formats, ignore text/JSON (like login requests)
+                if (this.response instanceof ArrayBuffer) {
+                    buf = this.response;
+                } else if (this.response instanceof Blob) {
+                    buf = await this.response.arrayBuffer();
+                } else {
+                    return; // Exit if it's not a binary file
+                }
+
                 const bytes = new Uint8Array(buf);
 
                 if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) {
@@ -115,7 +124,8 @@
                 }
             } catch (e) {}
         });
-        this.responseType = "arraybuffer";
+        
+        // Removed `this.responseType = "arraybuffer";` to fix login issues
         rawSend.apply(this, arguments);
     };
 
